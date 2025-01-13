@@ -31,38 +31,30 @@ jobs:
           name: production-files
           path: ./dist
 
-  #deploy:
-   # name: Deploy
-    #needs: build
-    #runs-on: ubuntu-latest
-    #if: github.ref == 'refs/heads/main'
-
-    #steps:
-      #- name: Download artifact
-       # uses: actions/download-artifact@v3
-        #with:
-         # name: production-files
-          #path: ./dist
-
-      #- name: Deploy to GitHub Pages
-      #  uses: peaceiris/actions-gh-pages@v3
-      #  with:
-      #    github_token: ${{ secrets.GITHUB_TOKEN }}
-       #   publish_dir: ./dist
-
-
- deploy:
+  deploy:
     name: Deploy
-    needs: build-and-test
+    needs: build
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
     steps:
-      - name: Download Test Results for Ubuntu
-        uses: actions/download-artifact@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v3
         with:
-          name: test-results-ubuntu-latest-${{ needs.build-and-test.outputs.os }}-${{ needs.build-and-test.outputs.run_number }}
-          path: path/to/downloaded-test-results
-      - name: Download Test Results for Windows
+          name: production-files
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          
+      - name: Deploy to GitHub Pages
         uses: actions/download-artifact@v4
         with:
           name: test-results-windows-latest-${{ needs.build-and-test.outputs.os }}-${{ needs.build-and-test.outputs.run_number }}
           path: path/to/downloaded-test-results
+
+
+      
