@@ -1,22 +1,33 @@
+import React from 'react';
 import './navbar.css'
+import Fun from "./pages/Fun";
+import Works from  './pages/Works'
+import Home from './pages/Home'
+import { Outlet, Link } from "react-router-dom";
 
-function NavagationBar(){
+function NavigationBar(){
     return(
-           <>
-	           <nav>
-					     <h1 id= "name">
-					         "Your Name!"
-					     </h1>
-					     <div>
-					          <ul id = "navbar">
-					               <li><a href="index.html">Home</a> </li>
-					               <li><a href="index.html">Works</a></li>
-					               <li><a href="index.html">Fun</a></li>
-					          </ul>
-					     </div>
-					    </nav>
-           </>
+        <>
+			<nav>
+				<h1 id= "name">
+					William Chen
+				</h1>
+				<div>
+					<ul id = "navbar">
+						<li>	
+							<Link to="/">Home</Link>
+						</li>
+						<li>
+							<Link to="/Works">Works</Link>
+						</li>
+						<li>
+							<Link to="/Fun">Fun</Link>
+						</li>
+					</ul>
+				</div>
+			</nav>
+        </>
     )
 }
 
-export default NavgationBar
+export default NavigationBar
