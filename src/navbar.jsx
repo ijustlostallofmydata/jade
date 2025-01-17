@@ -1,27 +1,37 @@
 import React from 'react';
 import './navbar.css'
-import Fun from "./pages/Fun";
-import Works from  './pages/Works'
-import Home from './pages/Home'
 import { Outlet, Link } from "react-router-dom";
 
 function NavigationBar(){
     return(
         <>
 			<nav>
-				<h1 id= "name">
-					William Chen
-				</h1>
 				<div>
 					<ul id = "navbar">
 						<li>	
-							<Link to="/">Home</Link>
+							<button>
+								<Link to="/">Home</Link>
+							</button>
 						</li>
 						<li>
-							<Link to="/Works">Works</Link>
+							<button>
+								<Link to="/Bio">Bio</Link>
+							</button>
 						</li>
 						<li>
-							<Link to="/Fun">Fun</Link>
+							<button>
+								<Link to="/Fun">Fun</Link>
+							</button>
+						</li>
+						<li>
+							<button>
+								<Link to="/Projects">Projects</Link>
+							</button>
+						</li>
+						<li>
+							<button>
+								<Link to="/Visuals">Visuals</Link>
+							</button>
 						</li>
 					</ul>
 				</div>

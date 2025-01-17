@@ -30,10 +30,12 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
 }
-
+p{
+  font-size: 1.333333333em
+}
 button {
   border-radius: 8px;
   border: 9px solid transparent;
@@ -41,7 +43,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1500ff;
+  background-color: #09006a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
