@@ -80,8 +80,8 @@ function encryptVigenere(text, key) {
         // console.log("Key must be letters only"); 
         return;
     }
-    
     var cipher = [];
+
     text = text.toLowerCase();
     key = key.toLowerCase().trim();
     for (let textIndex = 0, keyIndex = 0; textIndex < text.length; textIndex++)
