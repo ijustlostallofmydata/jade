@@ -61,14 +61,16 @@ function Projects() {
         Currently it can simplify expressions, differentiate expressions (probably better than me),
         compute x-intercepts, and to an extent compute extrema of expressions.
         Next I plan to test the code I have written to compute the domain of the expression.
-        It's become quite the labor of love! If only college wouldn't get in the way...
+        It's become quite the labor of love! 
+        Even if I might not be the most well equipped to solo this project (trust me, I'm really not), I still get to learn insane amounts of math on my own.
+        If only college wouldn't get in the way...
     </p>
     <p>
-        Building this CAS taught me many niche but surprisingly useful mathematical concepts.
-        If anyone wants to join in the FUN with building this CAS, it would be really helpful if they can do these assignments:
+        As mentioned before, building this CAS taught me many niche but surprisingly useful mathematical concepts.
+        If anyone wants to join in the FUN with building this CAS, it would be really helpful if they can do all these assignments (without using AI):
     </p>
     <li>
-        How many factors does 10! have?
+        How many factors does 10! have? What is a fast way to accomplish this task?
     </li>
     <li>	
         To multiply polynomials or big numbers, one would multiply individual terms/digits together and then sum these results to get the product.
